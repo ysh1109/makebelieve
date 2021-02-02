@@ -1,9 +1,28 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Home.css'
+
+import Video from '../Assets/3d_cube.mp4'
 function Home() {
+
+  
+  useEffect(()=>{
+    window.addEventListener('scroll',handleScroll)
+  },[])
+  const handleScroll = () => {
+    let vid = document.getElementById('video');
+   vid.currentTime = window.pageYOffset/800
+   console.log('scrolling---->',window.pageYOffset)
+  }
     return (
         <div className="home_container">
-        <section>
+            <div className="home_body">
+            <div  className="banner">
+              <video id="video"   src={Video} type="video/mp4" />
+            </div>
+            {/* <TestList/> */}
+        </div>
+
+        {/* <section>
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-9">
@@ -41,7 +60,7 @@ function Home() {
         </div>
           
       </div>
-  </section>
+  </section> */}
       </div>
       
     )
