@@ -21,6 +21,7 @@ function Connect() {
             setName('');
             setEmail('');
             setMessage('');
+            alert('Query has been submitted successfully');
         }
         else {
             alert('enter all the details to submit your enquiry');
@@ -35,16 +36,16 @@ function Connect() {
                         <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
                             <Form onSubmit={submitDetails}>
                                 <Form.Group>
-                                    <input className="input-style" type="text" placeholder="name" onChange={(e)=>setName(e.target.value)}/>
+                                    <input className="input-style" type="text" placeholder="name" value={name} onChange={(e)=>setName(e.target.value)}/>
                                 </Form.Group>
 
                                 <Form.Group >
-                                    <input className="input-style" type="email" placeholder="email"
+                                    <input className="input-style" type="email" value={email}  placeholder="email"
                                     onChange={(e)=>setEmail(e.target.value)}
                                     />
                                 </Form.Group>
                                 <Form.Group>
-                                <input  className="input-style txt-area" as="textarea" placeholder="message"
+                                <input  className="input-style txt-area" value={message}  as="textarea" placeholder="message"
                                 onChange={(e)=>setMessage(e.target.value)}
                                 />
                             </Form.Group>

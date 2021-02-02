@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import { Card } from 'react-bootstrap'
-
+import Card1 from './Card1'
 import './Work.css'
 function Work() {
     useEffect(() => {
@@ -52,21 +52,16 @@ function Work() {
             <h1 className="heading-featured-projects-txt">featured projects</h1>
           </div>
           <br></br>
-            <div className="row">
-            <div className="col-sm-12 col-md-4 col-xl-4 col-lg-4">
-                <a className="fp-none">
-                <div className="card-wrapper-fp">
-                    <div className="card-fp bg-img-1">
-                    <br></br> <br></br> <br></br> <br></br>
-                    <h1 className="fp-head"> bacardi nh7 weekender 2020</h1>
-                       <p className="service-digital">(digital)</p>
-                       <br></br>
-                    </div>
-                </div>
-                </a>
+            <div style={{justifyContent:'center'}} className="row">
+            
+               < Card1></ Card1>
+               < Card1></ Card1>
+               < Card1></ Card1>
+               < Card1></ Card1>
+               
                 
             </div>
-            </div>
+            
         </div>
 
         </section>

@@ -27,7 +27,7 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 function About() {
     return (
-        <div style={{paddingTop:'5px'}} >
+        <div>
         <section className="about-block">
         <div className="container-fluid">
         <div className="cube-3d">
@@ -58,7 +58,7 @@ function About() {
                 <div className="card services-card">
                     <img src={live} className="img-fluid img-style"></img>
                     <br></br>
-                    <a href="#" className="Live-link-style btn-hover right">live</a>
+                    <a  className="Live-link-style btn-hover right">live</a>
                 </div>
                 <div className="service-live">
                         <p className="live-left-txt"> <span className="dot"></span> spatial design</p>
@@ -71,9 +71,9 @@ function About() {
                <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                <div className="service-2 new-border-s">
                       <div className="card services-card">
-                      <img src={content} class="img-fluid img-style" alt=""></img>
+                      <img src={content} className="img-fluid img-style" alt=""></img>
                       <br></br>
-                      <a href="#" class="content-link-style">content</a>
+                      <a className="content-link-style">content</a>
                       </div>
                       <div className="service-live">
                         <p className="live-left-txt">motion graphics</p>
@@ -87,7 +87,7 @@ function About() {
                       <div className="card services-card">
                       <img src={content} className="img-fluid img-style" alt=""></img>
                       <br></br>
-                      <a href="#" className="digital-link-style">digital</a>
+                      <a  className="digital-link-style">digital</a>
                       </div>
                       <div className="service-live">
                         <p className="live-left-txt">web/app development</p>
