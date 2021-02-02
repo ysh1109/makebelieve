@@ -1,0 +1,16 @@
+.brand-logo-style{
+    height: 50px !important;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+.nav-link{
+    color: #fff !important;
+    font-family:  'LEIXO-DEMO';
+    font-weight: 400;
+    font-size: 20px;
+    margin-right: 15px;
+}
+.nav-link:hover{
+color: #0fff9b !important;
+transition: all .3s ease-in !important;
+}

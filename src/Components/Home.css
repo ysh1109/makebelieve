@@ -1,0 +1,67 @@
+.home_container{
+    overflow: scroll;
+}
+
+.home_container::-webkit-scrollbar {
+    display: none;
+  }
+  
+.exp-design-studio {
+    height: 100vh;
+    margin-left: 15px;
+    margin-top: 5%;
+}
+
+.head-first-fold{
+    color: #fff !important;
+    font-family:  'LEIXO-DEMO';
+    font-weight: lighter;
+    font-size: 35px;
+    text-align: left;
+    
+}
+
+.head-first-fold-highlight{
+    color: #0fff9b !important;
+    font-family:  'LEIXO-DEMO';
+    font-weight: lighter;
+    /* font-size: 50px; */
+}
+.exp-design-studio-s{
+    height: 100vh;
+    margin-left: 15px;
+}
+
+.head-second-fold{
+    color: #fff !important;
+    font-family:  'LEIXO-DEMO';
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: left;
+    line-height: 54px;
+}
+.head-second-fold-highlight{
+    color: #0fff9b !important;
+    font-family:  'LEIXO-DEMO';
+    font-weight: lighter;
+    /* font-size: 50px; */
+}
+.exp-design-studio-t{
+    height: 100vh;
+    margin-left: 15px;
+}
+.head-third-fold{
+    color: #fff !important;
+    font-family:  'LEIXO-DEMO';
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: left;
+    line-height: 54px;
+
+}
+.head-third-fold-highlight{
+    color: #0fff9b !important;
+    font-family:  'LEIXO-DEMO';
+    font-weight: lighter;
+    /* font-size: 50px; */
+}

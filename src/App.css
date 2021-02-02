@@ -1,5 +1,11 @@
+
 .App {
   text-align: center;
+    background-color: #000 !important;
+    background-image: url('../src/Assets/BGWITHNOISE.png');
+    /* height: 100vh; */
+  
+
 }
 
 .App-logo {

@@ -1,0 +1,117 @@
+.show-reel {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 96%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .show-reel video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .show-reel .video-div {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .show-reel .overlay-wcs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  .reel-top{
+      padding-top: 60px;
+  }
+  .reel-bottom{
+    padding-bottom: 100px;
+}
+.heading-featured-projects-txt{
+    color: #fff !important;
+    font-family:  'LEIXO-DEMO';
+    text-align: center;
+    font-weight: lighter;
+    font-size: 45px;
+  }
+  .feayured-projects-block{
+      padding-top: 100px;
+      padding-bottom: 100px;
+  }
+  .card-wrapper-fp {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.card-fp {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    height: 400px;
+    padding: 30px;
+    width: 360px;
+    background: #0fff9b;
+    border-radius: 5px;
+    box-shadow: 0px 8px 10px 5px rgba(0, 0, 0, 0.14);
+    transition: .2s;
+}
+.bg-img-1{
+    background-image: url('../Assets/card-01.jpg');
+    background-size: cover;
+}
+
+.fp-head{
+    font-family: 'LEIXO-DEMO';
+    font-size: 32px !important; 
+    color: #fff;
+    text-decoration: none;
+}
+.service-digital{
+    font-family: 'LEIXO-DEMO';
+    font-size: 40px !important; 
+    color: #0fff9b;
+    text-decoration: none;
+    opacity: .7;
+}
+.fp-none{
+    text-decoration: none !important;
+}
+@media only screen and (max-width: 768px){
+    .card-fp {
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        height: 400px;
+        padding: 30px;
+        margin-bottom: 35px;
+        width: 100%;
+        background: #0fff9b;
+        border-radius: 5px;
+        box-shadow: 0px 8px 10px 5px rgba(0, 0, 0, 0.14);
+        transition: .2s;
+    }
+    .bg-img-1{
+        background-image: url('../Assets/card-01.jpg');
+        background-size: cover;
+    }
+    
+}
