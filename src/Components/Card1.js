@@ -1,11 +1,30 @@
-import React, {useEffect} from 'react'
+import React, {useEffect,useState} from 'react'
 import { Card } from 'react-bootstrap'
 import './Work.css'
+import db from '../firebase.js';
+export default function Card1(props) {
 
-export default function Card1() {
+
+
+
+    
+  
     useEffect(() => {
       
-        Card()
+       
+            // db.collection('works').onSnapshot(snapshot=>(
+            //     setRooms(snapshot.docs.map(doc => (
+            //         {
+            //             id:doc.id,
+            //             data:doc.data()
+            //         }
+            //     )))
+            // ))
+    
+            Card()
+        
+        
+       
   
       }, [])
       const Card = ()=>{
@@ -23,7 +42,7 @@ export default function Card1() {
                   y: card.offsetHeight/2,
                   x: card.offsetWidth/2
               }
-              console.log(e.offsetX);
+            //   console.log(e.offsetX);
               card.style.transform = `rotateX(${(-e.offsetY + center.y)/8}deg) rotateY(${(e.offsetX - center.x)/8}deg)`;
           }
           
@@ -36,11 +55,11 @@ export default function Card1() {
         <div>
             <div  className="col-sm-12 col-md-4 col-xl-4 col-lg-4">
                 <a className="fp-none"  >
-            <div className="card-wrapper-fp" style={{marginBottom:30}}>
+                    <div className="card-wrapper-fp" style={{marginBottom:30}}>
                     <div className="card-fp bg-img-1">
                     <br></br> <br></br> <br></br> <br></br>
-                    <h1 className="fp-head"> bacardi nh7 weekender 2020</h1>
-                       <p className="service-digital">(digital)</p>
+                    <h1 className="fp-head"> {props.title}</h1>
+                       <p className="service-digital">({props.service})</p>
                        <br></br>
                     </div> 
                     </div>
