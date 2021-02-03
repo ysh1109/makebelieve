@@ -8,11 +8,17 @@ function Home() {
   useEffect(()=>{
     window.addEventListener('scroll',handleScroll)
   },[])
-  const handleScroll = () => {
-    let vid = document.getElementById('video');
-   vid.currentTime = window.pageYOffset/800
-   console.log('scrolling---->',window.pageYOffset)
-  }
+  const handleScroll = () => {let vid = document.getElementById('video');
+  vid.play();
+  let upper = 10;
+  let lower = 2;
+  var intv = upper - lower;
+  intv = Math.floor(1000 * (lower + intv * Math.random()));
+  setTimeout(function(){
+      vid.pause(); 
+  }, intv);
+} 
+
     return (
         <div className="home_container">
             <div className="home_body">
