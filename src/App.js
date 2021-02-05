@@ -5,6 +5,7 @@ import Home from './Components/Home.js'
 import Work from './Components/Work.js'
 import About from './Components/About.js'
 import Connect from './Components/Connect.js'
+import Featured from './Components/Featured.js'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
