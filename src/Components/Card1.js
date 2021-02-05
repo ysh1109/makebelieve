@@ -56,7 +56,7 @@ export default function Card1(props) {
             <div  className="col-sm-12 col-md-4 col-xl-4 col-lg-4">
                 <a className="fp-none"  >
                     <div className="card-wrapper-fp" style={{marginBottom:30}}>
-                    <div className="card-fp bg-img-1">
+                    <div className="card-fp bg-img-1" style={{backgroundImage:`url(${props.image})`}}>
                     <br></br> <br></br> <br></br> <br></br>
                     <h1 className="fp-head"> {props.title}</h1>
                        <p className="service-digital">({props.service})</p>

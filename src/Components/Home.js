@@ -6,11 +6,11 @@ function Home() {
 
   
   useEffect(()=>{
-    window.addEventListener('scroll',handleScroll)
+   // window.addEventListener('scroll',handleScroll)
   },[])
   const handleScroll = () => {
     let vid = document.getElementById('video');
-   vid.currentTime = window.pageYOffset/800
+   vid.currentTime = window.pageYOffset/750;
    console.log('scrolling---->',window.pageYOffset)
   }
     return (

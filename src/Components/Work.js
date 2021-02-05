@@ -59,7 +59,7 @@ function Work() {
             <div style={{justifyContent:'center'}} className="row">
             
               {cardList.map((item,key)=>(
-                 < Card1 id={item.id} title={item.title} service={item.service}/>
+                 < Card1 id={item.id} title={item.title} service={item.service} image={item.image}/>
               ))}
               
            
