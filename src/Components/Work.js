@@ -1,37 +1,41 @@
-import React, {useEffect} from 'react'
+import React, {useEffect,useState} from 'react'
 import { Card } from 'react-bootstrap'
-import Card1 from './Card1'
 import './Work.css'
+import db from '../firebase.js';
+import Card1 from './Card1'
+import { isElement } from 'react-dom/test-utils';
 function Work() {
+
+  const CardList = [
+    {"id":1,"title":"bacardi nh7 weekender 2020","service":"digital"},
+    {"id":2,"title":"nh7 weekender 2020","service":"digital"},
+    {"id":3,"title":"bacardi nh7  2020","service":"digital"},
+    {"id":4,"title":"2020","service":"digital"},
+    {"id":5,"title":"bacardi nh7 weekender 2020","service":"digital"},
+    {"id":6,"title":"2020","service":"digital"}
+]
+  
+  const [cardList,setCardList]  = useState([]);
+
     useEffect(() => {
-      
-      Card()
+     fetchBlogs();
 
     }, [])
-    const Card = ()=>{
-        const cards = document.querySelectorAll('.card-wrapper-fp');
+  
+    const fetchBlogs=async()=>{
+      const response=db.collection('works');
+      const data=await response.get();
+      const list = [];
+      data.docs.forEach(item=>{
+        const lstDoc = {idss:item.id,...item.data()}
+        list.push(lstDoc)
+        setCardList([...list])
+       })
 
-        for (let i = 0; i < cards.length; i++) {
-            const card = cards[i];
-            card.addEventListener('mousemove', cardRotate);
-            card.addEventListener('mouseleave', resetCard);
-        }
-        
-        function cardRotate(e) {
-            const card = this.querySelector('.card-fp');
-            let center = {
-                y: card.offsetHeight/2,
-                x: card.offsetWidth/2
-            }
-            console.log(e.offsetX);
-            card.style.transform = `rotateX(${(-e.offsetY + center.y)/8}deg) rotateY(${(e.offsetX - center.x)/8}deg)`;
-        }
-        
-        function resetCard(e) {
-            const card = this.querySelector('.card-fp');
-            card.style.transform = `rotate(0)`;
-        }
-    }
+
+      console.log(data)
+  }
+    
     return (
     <div>
         <div className="reel-top"></div>
@@ -54,10 +58,11 @@ function Work() {
           <br></br>
             <div style={{justifyContent:'center'}} className="row">
             
-               < Card1></ Card1>
-               < Card1></ Card1>
-               < Card1></ Card1>
-               < Card1></ Card1>
+              {cardList.map((item,key)=>(
+                 < Card1 id={item.id} title={item.title} service={item.service} image={item.image}/>
+              ))}
+              
+           
                
                 
             </div>
