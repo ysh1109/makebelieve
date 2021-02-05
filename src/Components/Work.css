@@ -26,7 +26,7 @@
   
   .show-reel .video-div {
     position: relative;
-    z-index: 2;
+    z-index: auto;
   }
   
   .show-reel .overlay-wcs {
@@ -37,7 +37,7 @@
     width: 100%;
     background-color: black;
     opacity: 0.5;
-    z-index: 1;
+    z-index: auto;
   }
   
   .reel-top{
@@ -100,18 +100,145 @@
         text-align: center;
         margin-right: auto;
         margin-left: auto;
-        height: 400px;
+        height: 370px;
         padding: 30px;
+        width: 280px;
         margin-bottom: 35px;
-        width: 100%;
         background: #0fff9b;
         border-radius: 5px;
-        box-shadow: 0px 8px 10px 5px rgba(0, 0, 0, 0.14);
+        box-shadow: 0px 8px 10px 5px rgb(0 0 0 / 14%);
         transition: .2s;
     }
     .bg-img-1{
         background-image: url('../Assets/card-01.jpg');
         background-size: cover;
     }
+    .outer {
+        position: relative !important;
+        margin-left: auto !important;
+        width: 40px !important;
+        cursor: pointer !important;
+        margin-top: 0px !important;
+    }
+    .m-b{
+        margin-bottom: 20px;
+    }
+    .title{
+        font-family: 'LEIXO-DEMO';
+        font-size: 28px !important; 
+        color: #0fff9b;
+        text-decoration: none;
+    }
+    .para{
+        font-family: 'LEIXO-DEMO';
+        font-size: 28px !important; 
+        color: #fff;
+        line-height: 134%;
+        text-decoration: none;
+    }
     
+}
+
+.title{
+    font-family: 'LEIXO-DEMO';
+    font-size: 32px !important; 
+    color: #0fff9b;
+    text-decoration: none;
+}
+.para{
+    font-family: 'LEIXO-DEMO';
+    font-size: 22px !important; 
+    color: #fff;
+    line-height: 134%;
+    text-decoration: none;
+}
+.style-btn{
+    text-align: right;
+}
+.service-name{
+    font-family: 'LEIXO-DEMO';
+    font-size: 20px !important; 
+    color: #0fff9b;
+    line-height: 134%;
+    text-decoration: none;
+}
+.btn-close{
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #0fff9b;
+    background-color: transparent;
+    color: white;
+    font-family: 'LEIXO-DEMO';
+    font-size: 16px !important; 
+}
+
+.outer {
+    position: relative;
+    margin-left: auto;
+    width: 60px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  .inner {
+    width: inherit;
+    text-align: center;
+  }
+  
+  label { 
+    font-size: 16px; 
+    /* line-height: ; */
+    /* text-transform: uppercase; */
+    color: #fff;
+    font-family: 'LEIXO-DEMO';
+    transition: all .3s ease-in;
+    opacity: 0;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 6px;
+  }
+  
+  .inner:before, .inner:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: inherit;
+    background: #0fff9b;
+    left: 0;
+    transition: all .3s ease-in;
+  }
+  
+  .inner:before {
+    top: 50%; 
+    transform: rotate(45deg);  
+  }
+  
+  .inner:after {  
+    bottom: 50%;
+    transform: rotate(-45deg);  
+  }
+  
+  .outer:hover label {
+    opacity: 1;
+  }
+  
+  .outer:hover .inner:before,
+  .outer:hover .inner:after {
+    transform: rotate(0);
+  }
+  
+  .outer:hover .inner:before {
+    top: 0;
+  }
+  
+  .outer:hover .inner:after {
+    bottom: 0;
+  }
+  .ReactModal__Overlay.ReactModal__Overlay--after-open {
+    position: fixed;
+    inset: 0px;
+    border: none;
+    background-color: rgb(0 0 0 / 90%) !important;
+}
+.heading-featured-projects {
+    margin-bottom: 40px;
 }
