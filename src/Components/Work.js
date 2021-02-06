@@ -8,7 +8,11 @@ import Modal from 'react-modal';
 function Work() {
   
   const [cardList,setCardList]  = useState([]);
+  const [title,setTitle] = useState('');
   const [show,setShow] = useState(false)
+  const [videoUrl,setVideoUrl] = useState('');
+  const [desc,setDesc] = useState('');
+  
     useEffect(() => {
      fetchBlogs();
 
@@ -26,6 +30,13 @@ function Work() {
 
 
       console.log(data)
+  }
+
+  const setModalData = (url,desc,title) => {
+    setVideoUrl(url)
+    setDesc(desc)
+    setTitle(title)
+    setShow(true)
   }
   const customStyles = {
     content : {
@@ -62,10 +73,10 @@ backgroundColor: '#000',
             <h1 className="heading-featured-projects-txt">featured projects</h1>
           </div>
           <br></br>
-            <div style={{justifyContent:'space-evenly'}}  variant="primary" onClick={() => setShow(true)} className="row">
+            <div style={{justifyContent:'space-evenly'}}  variant="primary"  className="row">
             
               {cardList.map((item,key)=>(
-                 < Card1 id={item.id} title={item.title} service={item.service} image={item.image}/>
+                 < Card1 id={item.id} title={item.title} service={item.service} image={item.image} setModalData={()=>setModalData(item.videourl,item.desc,item.title)}/>
               ))}
               
            
@@ -87,10 +98,10 @@ backgroundColor: '#000',
             <div className="style-btn">
             {/* <button className="btn-close" >close</button> */}
             <div onClick={()=>setShow(false)} class="outer">
-  <div class="inner">
-    <label>close</label>
-  </div>
-</div>
+          <div class="inner">
+            <label>close</label>
+          </div>
+        </div>
             </div>
           
           {/* <div>I am a modal</div> */}
@@ -99,19 +110,19 @@ backgroundColor: '#000',
               <div className="col-12 col-sm-12 col-md-12 col-xl-6 col-lg-6">
                   <div>
                   <div className="m-b" style={{ width: '100%', height: 'auto' }}>
-  <ResponsiveEmbed aspectRatio="16by9">
-    {/* <embed type="video" src="https://youtu.be/l9ZO_m7v5j8" /> */}
-    <iframe  src="https://www.youtube.com/embed/l9ZO_m7v5j8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </ResponsiveEmbed>
-</div>
-                  </div>
+            <ResponsiveEmbed aspectRatio="16by9">
+              {/* <embed type="video" src="https://youtu.be/l9ZO_m7v5j8" /> */}
+              <iframe  src={videoUrl} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </ResponsiveEmbed>
+          </div>
+                            </div>
               </div>
               <div className="col-12 col-sm-12 col-md-12 col-xl-6 col-lg-6">
               <div>
-                <h1 className="title">bacardi</h1>
+                <h1 className="title">{title}</h1>
                 <h4 className="service-name">(live)</h4>
                 <br></br>
-                <p className="para">We maintain that accessibility is a key component of any modern web application. As such, we have created this modal in such a way
+                <p className="para">{desc}
                 </p>
               </div>
               </div>
