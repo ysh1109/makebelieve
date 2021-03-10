@@ -37,7 +37,7 @@ function Home() {
       setScroll(scrollValue)
       let vid = document.getElementById('video');
       vid.play();
-      let upper = 10;
+      let upper = 20;
       let lower = 2;
       var intv = upper - lower;
       intv = Math.floor(1000 * (lower + intv * Math.random()));
@@ -49,7 +49,7 @@ function Home() {
       let y = document.getElementById("headerTwo")
       let z = document.getElementById("headerThree")
 
-    console.log(x)
+    console.log(window.pageYOffset)
     if(Number(window.pageYOffset)>200) {
       setH1txt(true)
       
@@ -57,12 +57,12 @@ function Home() {
       
     
     }
-    if(Number(window.pageYOffset)>500) {
+    if(Number(window.pageYOffset)>2500) {
       setH2txt(true)
 
       y?.classList.add('head-second-fold-ani')
     }
-    if(Number(window.pageYOffset)>800) {
+    if(Number(window.pageYOffset)>4000) {
       setH3txt(true)
 
       z?.classList.add('head-third-fold-ani')
