@@ -57,12 +57,12 @@ function Home() {
       
     
     }
-    if(Number(window.pageYOffset)>700) {
+    if(Number(window.pageYOffset)>500) {
       setH2txt(true)
 
       y?.classList.add('head-second-fold-ani')
     }
-    if(Number(window.pageYOffset)>250) {
+    if(Number(window.pageYOffset)>800) {
       setH3txt(true)
 
       z?.classList.add('head-third-fold-ani')
