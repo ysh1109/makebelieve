@@ -25,13 +25,7 @@ function Home() {
   const handleScroll = (e) => {
 
 
-  // if(Number(window.pageYOffset)>200) {
-  //   alert('sometini')
-  // }
- 
-    // scrollValue = Number(window.pageXOffset)
-
-    if(Number(window.pageYOffset)>scrollValue) {
+   if(Number(window.pageYOffset)>scrollValue) {
       console.log("scroll down")
       scrollValue = Number(window.pageYOffset)
       setScroll(scrollValue)
@@ -42,7 +36,13 @@ function Home() {
       var intv = upper - lower;
       intv = Math.floor(1000 * (lower + intv * Math.random()));
       setTimeout(function(){
-          vid.pause(); 
+        if(Number(window.pageYOffset)<4100){
+          vid.pause();
+        }
+        else {
+          vid.play()
+        }
+           
       }, intv);
 
       let x = document.getElementById("headerOne")
@@ -67,6 +67,7 @@ function Home() {
 
       z?.classList.add('head-third-fold-ani')
     }
+    
     
     }
     if (Number(window.pageYOffset) < scrollValue) {
