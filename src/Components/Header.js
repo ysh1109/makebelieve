@@ -17,7 +17,7 @@ function Header() {
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav style={{marginRight:'50px', zIndex:'999'}} className="ml-auto mt-auto">
+          <Nav style={{zIndex:'999'}} className="ml-auto mt-auto right-space">
           <Link className="nav-link"  style={{textDecoration:'none'}} to="/">home</Link>
             <Link className="nav-link" style={{textDecoration:'none'}} to="/work">work</Link>
             <Link className="nav-link" style={{textDecoration:'none'}} to="/about">about</Link>

@@ -51,9 +51,11 @@ function Connect() {
                             </Form.Group>
     
                             {/* <input type="text" value={name} onChange={e=>setName(e.target.value)}></input> */}
+                            <div className="centre">
                             <Button  className="btn-connect" type="submit" >
                                     send
                                  </Button>
+                                 </div>
                             </Form>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>

@@ -14,3 +14,11 @@
 color: #0fff9b !important;
 transition: all .3s ease-in !important;
 }
+.right-space{
+    margin-right: 50px;
+}
+@media only screen and (max-width: 768px) {
+    .right-space{
+        margin-right: 0px;
+    }
+}

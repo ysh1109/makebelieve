@@ -7,21 +7,20 @@ body{
 }
 .input-style{
     display: block;
-    width: 100% !important;
+    width: 80% !important;
     padding: .375rem .75rem;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
     background-color: #fff0 !important;
     background-clip: padding-box;
-    border: 4px solid #0fff9b !important;
+    border: 3px solid #0fff9b !important;
     -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     border-radius: 0 !important;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     font-family: 'LEIXO-DEMO';
-    font-size: 25px !important; 
+    font-size: 20px !important;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -38,19 +37,24 @@ body{
 }
 
 .btn-connect{
-    border: 4px solid #0fff9b !important ;
+    border: 3px solid #0fff9b !important ;
     padding: 4px 50px !important;
     color:#fff ;
     font-family: 'LEIXO-DEMO';
-    font-size: 25px !important; 
+    font-size: 20px !important; 
     background-color: #fff0 !important;
 }
 .btn-connect:hover{
-    border: 4px solid #0fff9b !important ;
+    border: 3px solid #0fff9b !important ;
     padding: 4px 50px;
     color:#fff ;
     font-family: 'LEIXO-DEMO';
-    font-size: 25px !important; 
+    font-size: 20px !important; 
     background-color: #0fff9b !important;
     transition: .3s ease-in;
+}
+.centre {
+    text-align: center;
+    margin-top: 18px;
+    width: 80%;
 }

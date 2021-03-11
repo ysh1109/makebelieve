@@ -41,7 +41,7 @@ function About() {
 </Player>
           </div>
           <div className="about-para-txt">
-            <p className="about-info"> We are a team of <span className="about-para-highlight">designers, engineers and curators</span> , <br></br> working together to create meaningful human interactions with <span className="about-para-highlight">art and technology.</span> </p>
+            <p className="about-info"> We are a team of <span className="about-para-highlight">designers, engineers and curators</span> <br></br> working together to create meaningful human interactions <br></br> with <span className="about-para-highlight">art and technology.</span> </p>
           </div>
           
         </div>
