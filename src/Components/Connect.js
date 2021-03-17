@@ -57,10 +57,20 @@ function Connect() {
                                  </Button>
                                  </div>
                             </Form>
+                            <section className="address-div">
+                                <div className="box-address">
+                                <p className="address"> <span className="highlight">address:</span> gently altered 201, kshitij, veera desai road, andheri (w), mumbai - 400058 </p>
+                                </div>
+                            </section>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>
                         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6"></div>
                     </div>
+                </div>
+            </section>
+            <section>
+                <div className="container-fluid">
+                <p className="copyright">© 2021 gently altered | all rights reserved</p>
                 </div>
             </section>
         </div>

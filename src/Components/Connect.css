@@ -58,3 +58,27 @@ body{
     margin-top: 18px;
     width: 80%;
 }
+.copyright{
+color:#0fff9b ;
+font-family: 'LEIXO-DEMO';
+font-size: 18px !important; 
+padding-bottom: 20px;
+text-align: center;
+}
+.address{
+color:#fff ;
+font-family: 'LEIXO-DEMO';
+font-size: 18px !important; 
+text-align: left;
+line-height: 1.4;
+}
+.address-div{
+padding-top: 60px;
+}
+.highlight{
+color:#0fff9b ;
+}
+.box-address{
+padding: 20px;
+border: .4px solid #0fff9b;
+}

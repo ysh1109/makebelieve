@@ -22,3 +22,9 @@ transition: all .3s ease-in !important;
         margin-right: 0px;
     }
 }
+.navbar-light .navbar-toggler-icon {
+    background-image: url('../Assets/menu.svg') !important;
+}
+.navbar-toggler {
+    font-size: 25px !important;
+}

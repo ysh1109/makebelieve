@@ -43,8 +43,8 @@ text-align: left;
 }
 .cube-3d{
     position: absolute;
-    top: 50px;
-    right: 12px;
+    top: 81px;
+    right: -5%;
     /* right: 40%; */
     /* top: 272px; */
 }
@@ -236,5 +236,19 @@ text-align: left;
     .services-head-txt{
         font-size: 30px;
     }
+    .about-block{
+        padding-top: 223px;
+    }
+    .about-para-txt{
+        padding-top: 80px;
+    }
+
     
 }
+.copyright{
+    color:#0fff9b ;
+    font-family: 'LEIXO-DEMO';
+    font-size: 18px !important; 
+    padding-bottom: 20px;
+    text-align: center;
+    }

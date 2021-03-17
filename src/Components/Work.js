@@ -128,6 +128,11 @@ backgroundColor: '#000',
               </div>
           </div>
         </Modal>
+        <section>
+                <div className="container-fluid">
+                <p className="copyright">© 2021 gently altered | all rights reserved</p>
+                </div>
+            </section>
     </div>
     )
 }

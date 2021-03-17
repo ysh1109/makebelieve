@@ -35,7 +35,7 @@ function About() {
   autoplay
   loop
   src="https://assets5.lottiefiles.com/packages/lf20_eq24dpkf.json"
-  style={{ height: '300px', width: '300px' }}
+  style={{ height: '400px', width: '400px' }}
 >
  
 </Player>
@@ -333,6 +333,11 @@ function About() {
                     </div>
                     </div>
       </section>
+      <section>
+                <div className="container-fluid">
+                <p className="copyright">© 2021 gently altered | all rights reserved</p>
+                </div>
+            </section>
       </div>
     )
 }

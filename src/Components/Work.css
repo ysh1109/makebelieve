@@ -242,3 +242,10 @@
 .heading-featured-projects {
     margin-bottom: 40px;
 }
+.copyright{
+  color:#0fff9b ;
+  font-family: 'LEIXO-DEMO';
+  font-size: 18px !important; 
+  padding-bottom: 20px;
+  text-align: center;
+  }
