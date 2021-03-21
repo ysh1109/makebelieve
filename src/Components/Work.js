@@ -1,11 +1,33 @@
-import React, {useEffect,useState} from 'react'
+import React, { useEffect, useState }  from 'react'
 import { Card , Button, ResponsiveEmbed} from 'react-bootstrap'
 import './Work.css'
 import db from '../firebase.js';
 import Card1 from './Card1'
 import { isElement } from 'react-dom/test-utils';
 import Modal from 'react-modal';
+import scrollTop from '../Assets/scrollTop.svg'
 function Work() {
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Set the top cordinate to 0
+  // make scrolling smooth
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+  }, []);
   
   const [cardList,setCardList]  = useState([]);
   const [title,setTitle] = useState('');
@@ -54,7 +76,11 @@ backgroundColor: '#000',
   };
     
     return (
-    <div>
+      <div className="scroll-to-top">
+      {isVisible && 
+      <div onClick={scrollToTop}>
+        <img className="scroll-top" src={scrollTop} alt='Go to top'/>
+      </div>}
         <div className="reel-top"></div>
         <section className="show-reel">
         <div className="overlay-wcs"></div>

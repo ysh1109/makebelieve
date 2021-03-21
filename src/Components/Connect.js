@@ -1,8 +1,30 @@
-import React,{useState} from 'react'
+import React, { useEffect, useState }  from 'react'
 import './Connect.css'
 import { Form, Button } from 'react-bootstrap';
 import db from '../firebase.js';
+import scrollTop from '../Assets/scrollTop.svg'
 function Connect() {
+    const [isVisible, setIsVisible] = useState(false);
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Set the top cordinate to 0
+  // make scrolling smooth
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+  }, []);
     const [name,setName] = useState("");
     const [email,setEmail] = useState("");
     const [message,setMessage] = useState("");
@@ -28,7 +50,11 @@ function Connect() {
         }
     }
     return (
-        <div>
+        <div className="scroll-to-top">
+        {isVisible && 
+        <div onClick={scrollToTop}>
+          <img className="scroll-top" src={scrollTop} alt='Go to top'/>
+        </div>}
             <section className="contact-us-block">
                 <div className="container-fluid">
                     <div className="row">

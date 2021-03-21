@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState }  from 'react'
 import './About.css'
 import live from '../Assets/SVG/live.svg'
 import content from '../Assets/SVG/content.svg'
@@ -21,13 +21,40 @@ import client17 from '../Assets/website-logos/client-17.png'
 import client18 from '../Assets/website-logos/client-18-02.png'
 import client19 from '../Assets/website-logos/client-19-02.png'
 import client21 from '../Assets/website-logos/client-21.png'
+import scrollTop from '../Assets/scrollTop.svg'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 
 
 function About() {
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Set the top cordinate to 0
+  // make scrolling smooth
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+  }, []);
+
     return (
-        <div>
+        <div className="scroll-to-top">
+        {isVisible && 
+        <div onClick={scrollToTop}>
+          <img className="scroll-top" src={scrollTop} alt='Go to top'/>
+        </div>}
         <section className="about-block">
         <div className="container-fluid">
         <div className="cube-3d">

@@ -1,8 +1,8 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState }  from 'react'
 import './Home.css'
 import Video from '../Assets/3d_cube.mp4'
 function Home() {
-
+  
 
   const [h1txt,setH1txt] = useState(false)
   const [h2txt,setH2txt] = useState(false)
@@ -81,6 +81,8 @@ function Home() {
 } 
 
     return (
+  
+        
         <div className="home_container" >
             <div className="home_body">
             <div  className="banner">
@@ -115,7 +117,6 @@ function Home() {
                 </div>
             </section>
       </div>
-      
     )
 }
 
