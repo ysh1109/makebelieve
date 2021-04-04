@@ -1,7 +1,8 @@
 import React, { useEffect, useState }  from 'react'
 import './About.css'
-import live from '../Assets/SVG/live.svg'
-import content from '../Assets/SVG/content.svg'
+import live from '../Assets/live.svg'
+import digital from '../Assets/Digital.svg'
+import content from '../Assets/SVG/live.svg'
 import client1 from '../Assets/website-logos/client-1.png'
 import client2 from '../Assets/website-logos/client-2.png'
 import client3 from '../Assets/website-logos/client-3.png'
@@ -106,13 +107,15 @@ function About() {
                         <p className="live-left-txt">motion graphics</p>
                         <p className="live-left-txt">animation/vfx</p>
                         <p className="live-left-txt">sound design</p>
+                        <p className="live-left-txt">cinematography</p>
+                        <p className="live-left-txt">live streaming</p>
                       </div>
                   </div>
                </div>
                <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-               <div className="service-3 new-border-s">
+               <div className="service-3 new-border-s-n">
                       <div className="card services-card">
-                      <img src={content} className="img-fluid img-style" alt=""></img>
+                      <img src={digital} className="img-fluid img-style" alt=""></img>
                       <br></br>
                       <a  className="digital-link-style">digital</a>
                       </div>
@@ -360,9 +363,9 @@ function About() {
                     </div>
                     </div>
       </section>
-      <section>
+            <section>
                 <div className="container-fluid">
-                <p className="copyright">© 2021 gently altered | all rights reserved</p>
+                <p className="copyright">© <span className="Digit-style">2021</span> gently altered | all rights reserved</p>
                 </div>
             </section>
       </div>

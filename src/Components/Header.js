@@ -17,10 +17,10 @@ function Header() {
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-        <Nav style={{marginRight:'50px', zIndex:'999999999', textAlign:'right'}} className="ml-auto m-view">
+        <Nav className="ml-auto m-view m-view-m">
           <Link className="nav-link"  style={{textDecoration:'none', zIndex:'999'}} to="/">home</Link>
+          <Link className="nav-link" style={{textDecoration:'none' , zIndex:'999'}} to="/about">about</Link>
             <Link className="nav-link" style={{textDecoration:'none' , zIndex:'999'}} to="/work">work</Link>
-            <Link className="nav-link" style={{textDecoration:'none' , zIndex:'999'}} to="/about">about</Link>
             <Link className="nav-link" style={{textDecoration:'none' , zIndex:'999'}} to="/connect">Connect</Link>
           </Nav>
         </Navbar.Collapse>

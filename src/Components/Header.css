@@ -21,6 +21,11 @@ transition: all .3s ease-in !important;
     .right-space{
         margin-right: 0px;
     }
+    .m-view-m{
+        margin-right: 0px !important;
+        z-index: 999999999;
+        text-align: right;
+        }
 }
 .navbar-light .navbar-toggler-icon {
     background-image: url('../Assets/menu.svg') !important;
@@ -28,3 +33,13 @@ transition: all .3s ease-in !important;
 .navbar-toggler {
     font-size: 25px !important;
 }
+.m-view-m{
+margin-right: 50px;
+z-index: 999999999;
+text-align: right;
+}
+
+.Digit-style{
+    font-family: 'Ariel-Rounded';
+  }
+ 

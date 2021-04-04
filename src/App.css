@@ -3,9 +3,7 @@
   text-align: right;
     background-color: #000 !important;
     background-image: url('../src/Assets/BGWITHNOISE.png');
-    /* height: 100vh; */
-  
-
+    height: 100%;
 }
 
 

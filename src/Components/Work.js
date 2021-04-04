@@ -156,7 +156,7 @@ backgroundColor: '#000',
         </Modal>
         <section>
                 <div className="container-fluid">
-                <p className="copyright">© 2021 gently altered | all rights reserved</p>
+                <p className="copyright">© <span className="Digit-style">2021</span> gently altered | all rights reserved</p>
                 </div>
             </section>
     </div>

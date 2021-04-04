@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: right;
+background-color: #000 !important;
+background-image: url('../src/Assets/BGWITHNOISE.png');
+height: 100%;
 }
 
 code {
@@ -14,4 +18,8 @@ code {
 @font-face{
   font-family: 'LEIXO-DEMO';
 src:  url('./Assets/leixo/LEIXO-DEMO.ttf') ;
+}
+@font-face{
+  font-family: 'Ariel-Rounded';
+src:  url('./Assets/arlrdbd.ttf') ;
 }

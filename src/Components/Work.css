@@ -250,12 +250,13 @@
   text-align: left;
   }
   .scroll-top{
-    right: 89px;
+    right: 40px !important;
+    height: 65px !important;
     bottom: 29px;
     z-index: 9999999;
     position: fixed;
-    background-color: #000;
-    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0) !important;
+
 }
 @media only screen and (max-width: 768px){
 .scroll-top {
@@ -264,8 +265,11 @@
     bottom: 19px !important;
     z-index: 9999999;
     position: fixed;
-    background-color: #000 !important;
-    padding: 2px 15px !important;
+    background-color: rgba(0, 0, 0, 0) !important;
     width: 50px !important;
 }
+}
+
+.Digit-style{
+  font-family: 'Ariel-Rounded';
 }

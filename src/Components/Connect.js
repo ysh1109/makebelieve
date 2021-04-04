@@ -60,6 +60,12 @@ function Connect() {
                     <div className="row">
                         <div class="col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>
                         <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <section className="address-div">
+                                <div className="box-address">
+                                <p className="address"> <span className="highlight">address:</span> gently altered <span className="Digit-style">201</span>, kshitij, veera desai road, andheri (w), mumbai - <span className="Digit-style">400058</span> </p>
+                                </div>
+                            </section>
+                            <br></br>
                             <Form onSubmit={submitDetails}>
                                 <Form.Group>
                                     <input className="input-style" type="text" placeholder="name" value={name} onChange={(e)=>setName(e.target.value)}/>
@@ -83,11 +89,7 @@ function Connect() {
                                  </Button>
                                  </div>
                             </Form>
-                            <section className="address-div">
-                                <div className="box-address">
-                                <p className="address"> <span className="highlight">address:</span> gently altered 201, kshitij, veera desai road, andheri (w), mumbai - 400058 </p>
-                                </div>
-                            </section>
+                          
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>
                         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6"></div>
@@ -96,7 +98,7 @@ function Connect() {
             </section>
             <section>
                 <div className="container-fluid">
-                <p className="copyright">© 2021 gently altered | all rights reserved</p>
+                <p className="copyright">© <span className="Digit-style">2021</span> gently altered | all rights reserved</p>
                 </div>
             </section>
         </div>
