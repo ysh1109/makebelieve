@@ -1,124 +1,170 @@
 
     .home_body {
-    min-height: 1500vh;
-  }
-  
-  .banner {
-    position: fixed;
-    right: 0;
-    width: 50vw;
-    height: 90vh;
-    mask-image: linear-gradient(to top left,rgb(0, 0, 0,1),rgba(0, 0,0, 0));
-
-    background-image:  url('../Assets/BGWITHNOISE.png');
-    ;
-  }
-  
-  .banner video {
-    /* position: absolute; */
-    top:0;
-    left:0;
-    width: 50vw;
-    height: 90vh;
-    object-fit: contain;
-  }
-.home_container{
-    overflow: scroll;
-}
-
-.home_container::-webkit-scrollbar {
-    display: none;
-  }
-  
-.exp-design-studio {
-    height: 100vh;
-    margin-left: 15px;
-    margin-top: 5%;
-}
-
-
-.head-first-fold{
-    color: #fff !important;
-    font-family:  'LEIXO-DEMO';
-    font-weight: lighter;
-    font-size: 28px;
-    text-align: left;
-    /* margin-left: -1500px; */
-    display: none;
+        min-height: 1500vh;
+      }
+      
+      .banner {
+        position: fixed;
+        right: 0;
+        width: 50vw;
+        height: 90vh;
+        mask-image: linear-gradient(to top left,rgb(0, 0, 0,1),rgba(0, 0,0, 0));
     
-}
-.head-first-fold-ani{
-    display: block;
-    animation: textTp 1s linear;
-    
-}
-
-@keyframes textTp {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
+        background-image:  url('../Assets/BGWITHNOISE.png');
+        ;
+      }
+      
+      .banner video {
+        /* position: absolute; */
+        top:0;
+        left:0;
+        width: 50vw;
+        height: 90vh;
+        object-fit: contain;
+      }
+    .home_container{
+        overflow: scroll;
     }
-    50% {
-        transform: translateY(50px);
-        opacity: 0.5;
+    
+    .home_container::-webkit-scrollbar {
+        display: none;
+      }
+      
+    .exp-design-studio {
+        height: 100vh;
+        margin-left: 15px;
+        margin-top: 5%;
+    }
+    
+    
+    .head-first-fold{
+        color: #fff !important;
+        font-family:  'LEIXO-DEMO';
+        font-weight: lighter;
+        font-size: 28px;
+        text-align: left;
+        /* margin-left: -1500px; */
+        display: none;
+        
+    }
+    .head-first-fold-ani{
+        display: block;
+        animation: textTp 1s linear;
+        
+    }
+    
+    @keyframes textTp {
+        0% {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        50% {
+            transform: translateY(50px);
+            opacity: 0.5;
+        }
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    .head-first-fold-highlight{
+        color: #0fff9b !important;
+        font-family:  'LEIXO-DEMO';
+        font-weight: lighter;
+        /* font-size: 50px; */
+    }
+    .exp-design-studio-s{
+        height: 100vh;
+        margin-left: 15px;
+    }
+    
+    .head-second-fold{
+        color: #fff !important;
+        font-family:  'LEIXO-DEMO';
+        font-weight: lighter;
+        font-size: 28px;
+        display:none;
+        /* margin-left:-1500px ; */
+        text-align: left;
+        line-height: 54px;
+    }
+    .head-second-fold-ani{
+        display: block;
+        animation: textTp 1s linear;
+        
+    }
+    .head-second-fold-highlight{
+        color: #0fff9b !important;
+        font-family:  'LEIXO-DEMO';
+        font-weight: lighter;
+        /* font-size: 50px; */
+    }
+    .exp-design-studio-t{
+        height: 100vh;
+        margin-left: 15px;
+    }
+    .head-third-fold{
+        color: #fff !important;
+        font-family:  'LEIXO-DEMO';
+        font-weight: lighter;
+        font-size: 28px;
+        display: none;
+        /* margin-left: -1500px; */
+        text-align: left;
+        line-height: 54px;
+    
+    }
+    .head-third-fold-ani{
+        display: block;
+        animation: textTp 1s linear;
+        
+    }
+    .head-third-fold-highlight{
+        color: #0fff9b !important;
+        font-family:  'LEIXO-DEMO';
+        font-weight: lighter;
+        /* font-size: 50px; */
+    }
+    .copyright{
+        color:#0fff9b ;
+        font-family: 'LEIXO-DEMO';
+        font-size: 10px !important;
+        padding-bottom: 20px;
+        text-align: left;
+        }
+        
+        .mobile-view{
+           flex: 1;
+           display: flex;
+           height: 83vh;
+           overflow: hidden;
+        } 
+        h2{
+            text-align: left;
+            padding-left: 30px;
+            padding-bottom: 20px;
+            animation: test 1s ease-in infinite;
+        }
+    
+    @keyframes test{
+       0%{
+           transform: translateY(0);
+       }
+       50%{
+        transform: translateY(5px);
     }
     100%{
-        transform: translateY(0px);
-        opacity: 1;
+        transform: translateY(0);
     }
-}
-.head-first-fold-highlight{
-    color: #0fff9b !important;
-    font-family:  'LEIXO-DEMO';
-    font-weight: lighter;
-    /* font-size: 50px; */
-}
-.exp-design-studio-s{
-    height: 100vh;
-    margin-left: 15px;
-}
-
-.head-second-fold{
-    color: #fff !important;
-    font-family:  'LEIXO-DEMO';
-    font-weight: lighter;
-    font-size: 28px;
-    display:none;
-    /* margin-left:-1500px ; */
-    text-align: left;
-    line-height: 54px;
-}
-.head-second-fold-ani{
-    display: block;
-    animation: textTp 1s linear;
+    }
+        @media only screen and (max-width: 768px) {
+            .mobile-view{
+                flex-direction:column !important;
+                height: 150vh;
+             }
+        }
     
-}
-.head-second-fold-highlight{
-    color: #0fff9b !important;
-    font-family:  'LEIXO-DEMO';
-    font-weight: lighter;
-    /* font-size: 50px; */
-}
-.exp-design-studio-t{
-    height: 100vh;
-    margin-left: 15px;
-}
-.head-third-fold{
-    color: #fff !important;
-    font-family:  'LEIXO-DEMO';
-    font-weight: lighter;
-    font-size: 28px;
-    display: none;
-    /* margin-left: -1500px; */
-    text-align: left;
-    line-height: 54px;
 
-}
-.head-third-fold-ani{
-    display: block;
-    animation: textTp 1s linear;
-    
-}
 .head-third-fold-highlight{
     color: #0fff9b !important;
     font-family:  'LEIXO-DEMO';
