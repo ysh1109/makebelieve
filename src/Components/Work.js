@@ -34,6 +34,8 @@ function Work() {
   const [show,setShow] = useState(false)
   const [videoUrl,setVideoUrl] = useState('');
   const [desc,setDesc] = useState('');
+  const [image,setImage] = useState('');
+  const [isImage,setIsImage] = useState('')
   
     useEffect(() => {
      fetchBlogs();
@@ -54,11 +56,13 @@ function Work() {
       console.log(data)
   }
 
-  const setModalData = (url,desc,title) => {
+  const setModalData = (url,desc,title,image,showImage) => {
     setVideoUrl(url)
     setDesc(desc)
     setTitle(title)
     setShow(true)
+    setImage(image)
+    setIsImage(showImage)
   }
   const customStyles = {
     content : {
@@ -102,7 +106,7 @@ backgroundColor: '#000',
             <div style={{justifyContent:'space-evenly'}}  variant="primary"  className="row">
             
               {cardList.map((item,key)=>(
-                 < Card1 id={item.id} title={item.title} service={item.service} image={item.image} setModalData={()=>setModalData(item.videourl,item.desc,item.title)}/>
+                 < Card1 id={item.id} title={item.title} service={item.service} image={item.image} setModalData={()=>setModalData(item.videourl,item.desc,item.title,item.image,item.isImage)}/>
               ))}
               
            
@@ -138,7 +142,9 @@ backgroundColor: '#000',
                   <div className="m-b" style={{ width: '100%', height: 'auto' }}>
             <ResponsiveEmbed aspectRatio="16by9">
               {/* <embed type="video" src="https://youtu.be/l9ZO_m7v5j8" /> */}
+             {isImage?<img src={image} style={{height:'100%',width:'100%',objectFit:'contain'}}/> :
               <iframe  src={videoUrl} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            }
             </ResponsiveEmbed>
           </div>
                             </div>
