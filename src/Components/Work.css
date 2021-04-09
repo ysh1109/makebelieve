@@ -86,14 +86,17 @@
     text-decoration: none;
 }
 .service-digital{
-    font-family: 'LEIXO-DEMO';
-    font-size: 20px !important; 
-    color: #0fff9b;
-    text-decoration: none;
-    opacity: .7;
-    position: absolute;
-    bottom:0;
-    right: 10px;
+  font-family: 'LEIXO-DEMO';
+  font-size: 20px !important;
+  color: #0fff9b;
+  text-decoration: none;
+  opacity: .7;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  background: black;
+  padding: 5px;
+  border-radius: 5px;
 }
 .fp-none{
     text-decoration: none !important;

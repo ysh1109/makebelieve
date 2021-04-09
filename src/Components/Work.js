@@ -36,6 +36,9 @@ function Work() {
   const [desc,setDesc] = useState('');
   const [image,setImage] = useState('');
   const [isImage,setIsImage] = useState('')
+  const [digital,setDigital] = useState([])
+  const [music,setMusic] = useState([])
+  const [selectedItem,setSelectedItem] = useState('digital')
   
     useEffect(() => {
      fetchBlogs();
@@ -46,16 +49,43 @@ function Work() {
       const response=db.collection('works');
       const data=await response.get();
       const list = [];
+      const digital = [];
+      const music = [];
       data.docs.forEach(item=>{
         const lstDoc = {idss:item.id,...item.data()}
-        list.push(lstDoc)
-        setCardList([...list])
+        console.log("data=========>",item.data())
+
+        if(lstDoc.service.toLowerCase() == "digital") {
+          digital.push(lstDoc)
+          setDigital([...digital])
+          setCardList([...digital])
+        }
+        if(lstDoc.service.toLowerCase() == "music") {
+          music.push(lstDoc)
+          setMusic([...music])
+        }
        })
 
 
       console.log(data)
   }
 
+  const selectedList = (tabName) => {
+    switch (tabName) {
+      case 'digital' : {
+          setCardList(digital)
+          setSelectedItem('digital')
+          break;
+      }
+      case 'music' : {
+          setCardList(music)
+          setSelectedItem('music')
+
+          break;
+      }
+     
+  } 
+  }
   const setModalData = (url,desc,title,image,showImage) => {
     setVideoUrl(url)
     setDesc(desc)
@@ -79,6 +109,15 @@ backgroundColor: '#000',
     }
   };
     
+
+  const renderList = (data) => {
+    return (
+      data.map((item,key)=>(
+        < Card1 id={item.id} title={item.title} service={item.service} image={item.image} setModalData={()=>setModalData(item.videourl,item.desc,item.title,item.image,item.isImage)}/>
+     ))
+    )
+    
+  }
     return (
       <div className="scroll-to-top">
       {isVisible && 
@@ -102,14 +141,26 @@ backgroundColor: '#000',
         <div className="heading-featured-projects">
             <h1 className="heading-featured-projects-txt">featured projects</h1>
           </div>
+          <div style={{display:'flex',justifyContent:'space-evenly'}}>
+              <div onClick={()=>{selectedList('digital')}}>
+              {selectedItem=='digital'?
+              <p style={{background:'#0fff9b',padding:10,fontWeight:'bold',fontSize:24,borderRadius:10,color:"black"}}>Digital</p>:
+              <p style={{background:'#0fff9b',padding:10,fontWeight:'bold',fontSize:24,borderRadius:10,color:'white'}}>Digital</p>
+              }
+              </div>
+              <div  onClick={()=>{selectedList('music')}}>
+              {selectedItem=='music'?
+              <p style={{background:'#0fff9b',padding:10,fontWeight:'bold',fontSize:24,borderRadius:10,color:"black"}}>Music</p>:
+              <p style={{background:'#0fff9b',padding:10,fontWeight:'bold',fontSize:24,borderRadius:10,color:'white'}}>Music</p>
+              }
+               </div>
+          </div>
           <br></br>
             <div style={{justifyContent:'space-evenly'}}  variant="primary"  className="row">
             
-              {cardList.map((item,key)=>(
-                 < Card1 id={item.id} title={item.title} service={item.service} image={item.image} setModalData={()=>setModalData(item.videourl,item.desc,item.title,item.image,item.isImage)}/>
-              ))}
+             
               
-           
+           {renderList(cardList)}
                
                 
             </div>
