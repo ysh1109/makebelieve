@@ -161,7 +161,7 @@ backgroundColor: '#000',
         <div className="heading-featured-projects">
             <h1 className="heading-featured-projects-txt">featured projects</h1>
           </div>
-          <div  style={{display:'flex',justifyContent:'space-evenly'}}>
+          <div  style={{display:'flex',justifyContent:'space-evenly',marginTop:60}}>
           <div className="tabbar" onClick={()=>{selectedList('live')}}>
               {selectedItem=='live'?
               <p className="zoom" style={{padding:10,fontWeight:'bold',color:"#0fff9b"}}>LIVE</p>:
