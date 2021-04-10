@@ -188,7 +188,7 @@ backgroundColor: '#000',
                </div>
           </div>
           <br></br>
-            <div style={{justifyContent:'space-evenly'}}  variant="primary"  className="row">
+            <div style={{justifyContent:'space-evenly',marginTop:15}}  variant="primary"  className="row">
             
              
               

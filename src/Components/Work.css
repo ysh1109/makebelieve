@@ -52,6 +52,8 @@
     text-align: center;
     font-weight: lighter;
     font-size: 35px;
+    text-decoration: underline;
+    text-decoration-color: #0fff9b;
   }
   .feayured-projects-block{
       padding-top: 100px;
@@ -119,6 +121,9 @@
 }
 .tabbar > p {
   font-size: 24px;
+}
+.tabbar:hover {
+  cursor: pointer;
 }
 @media only screen and (max-width: 768px){
     .card-fp {
