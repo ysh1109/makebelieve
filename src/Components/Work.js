@@ -37,8 +37,10 @@ function Work() {
   const [image,setImage] = useState('');
   const [isImage,setIsImage] = useState('')
   const [digital,setDigital] = useState([])
-  const [music,setMusic] = useState([])
-  const [selectedItem,setSelectedItem] = useState('digital')
+  const [live,setLive] = useState([])
+  const [content,setContent] = useState([])
+  const [viewAll,setViewAll] = useState([])
+  const [selectedItem,setSelectedItem] = useState('live')
   
     useEffect(() => {
      fetchBlogs();
@@ -50,19 +52,25 @@ function Work() {
       const data=await response.get();
       const list = [];
       const digital = [];
-      const music = [];
+      const live = [];
+      const content = [];
+      const viewall = []
       data.docs.forEach(item=>{
         const lstDoc = {idss:item.id,...item.data()}
-        console.log("data=========>",item.data())
-
-        if(lstDoc.service.toLowerCase() == "digital") {
+        viewall.push(lstDoc);
+        setViewAll([...viewall])
+        if(lstDoc.service == "digital") {
           digital.push(lstDoc)
           setDigital([...digital])
           setCardList([...digital])
         }
-        if(lstDoc.service.toLowerCase() == "music") {
-          music.push(lstDoc)
-          setMusic([...music])
+        if(lstDoc.service== "live") {
+          live.push(lstDoc)
+          setLive([...live])
+        }
+        if(lstDoc.service== "content") {
+          content.push(lstDoc)
+          setContent([...content])
         }
        })
 
@@ -77,12 +85,24 @@ function Work() {
           setSelectedItem('digital')
           break;
       }
-      case 'music' : {
-          setCardList(music)
-          setSelectedItem('music')
+      case 'live' : {
+          setCardList(live)
+          setSelectedItem('live')
 
           break;
       }
+      case 'content' : {
+        setCardList(content)
+        setSelectedItem('content')
+
+        break;
+    }
+    case 'viewall' : {
+      setCardList(viewAll)
+      setSelectedItem('viewall')
+
+      break;
+  }
      
   } 
   }
@@ -141,17 +161,29 @@ backgroundColor: '#000',
         <div className="heading-featured-projects">
             <h1 className="heading-featured-projects-txt">featured projects</h1>
           </div>
-          <div style={{display:'flex',justifyContent:'space-evenly'}}>
-              <div onClick={()=>{selectedList('digital')}}>
-              {selectedItem=='digital'?
-              <p style={{background:'#0fff9b',padding:10,fontWeight:'bold',fontSize:24,borderRadius:10,color:"black"}}>Digital</p>:
-              <p style={{background:'#0fff9b',padding:10,fontWeight:'bold',fontSize:24,borderRadius:10,color:'white'}}>Digital</p>
+          <div  style={{display:'flex',justifyContent:'space-evenly'}}>
+          <div className="tabbar" onClick={()=>{selectedList('live')}}>
+              {selectedItem=='live'?
+              <p className="zoom" style={{padding:10,fontWeight:'bold',color:"#0fff9b"}}>LIVE</p>:
+              <p style={{padding:10,fontWeight:'bold',color:'white'}}>LIVE</p>
               }
               </div>
-              <div  onClick={()=>{selectedList('music')}}>
-              {selectedItem=='music'?
-              <p style={{background:'#0fff9b',padding:10,fontWeight:'bold',fontSize:24,borderRadius:10,color:"black"}}>Music</p>:
-              <p style={{background:'#0fff9b',padding:10,fontWeight:'bold',fontSize:24,borderRadius:10,color:'white'}}>Music</p>
+              <div className="tabbar" onClick={()=>{selectedList('content')}}>
+              {selectedItem=='content'?
+              <p className="zoom" style={{padding:10,fontWeight:'bold',color:"#0fff9b"}}>CONTENT</p>:
+              <p style={{padding:10,fontWeight:'bold',color:'white'}}>CONTENT</p>
+              }
+               </div>
+              <div className="tabbar" onClick={()=>{selectedList('digital')}}>
+              {selectedItem=='digital'?
+              <p className="zoom"  style={{padding:10,fontWeight:'bold',color:"#0fff9b"}}>DIGITAL</p>:
+              <p style={{padding:10,fontWeight:'bold',color:'white'}}>DIGITAL</p>
+              }
+              </div>
+              <div className="tabbar" onClick={()=>{selectedList('viewall')}}>
+              {selectedItem=='viewall'?
+              <p className="zoom" style={{padding:10,fontWeight:'bold',color:"#0fff9b"}}>VIEW ALL</p>:
+              <p style={{padding:10,fontWeight:'bold',color:'white'}}>VIEW ALL</p>
               }
                </div>
           </div>

@@ -85,6 +85,22 @@
     color: #fff;
     text-decoration: none;
 }
+.zoom {
+  animation: updown 1s ease 0s infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+
+  }
+  100% {
+    transform: translateY(0px);
+    }
+}
 .service-digital{
   font-family: 'LEIXO-DEMO';
   font-size: 20px !important;
@@ -100,6 +116,9 @@
 }
 .fp-none{
     text-decoration: none !important;
+}
+.tabbar > p {
+  font-size: 24px;
 }
 @media only screen and (max-width: 768px){
     .card-fp {
@@ -142,9 +161,21 @@
         line-height: 134%;
         text-decoration: none;
     }
+    .tabbar > p {
+      font-size: 22px;
+    }
     
 }
-
+@media only screen and (max-width: 500px){ 
+  .tabbar > p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 400px){ 
+  .tabbar > p {
+    font-size: 16px;
+  }
+}
 .title{
     font-family: 'LEIXO-DEMO';
     font-size: 32px !important; 
