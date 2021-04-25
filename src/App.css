@@ -6,7 +6,10 @@
     height: 100%;
 }
 
-
+.mobileHeader {
+  height: 80vh;
+  background-image: url('../src/Assets/BGWITHNOISE.png');
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

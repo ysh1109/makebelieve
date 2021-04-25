@@ -62,11 +62,12 @@ function Work() {
         if(lstDoc.service == "digital") {
           digital.push(lstDoc)
           setDigital([...digital])
-          setCardList([...digital])
+         
         }
         if(lstDoc.service== "live") {
           live.push(lstDoc)
           setLive([...live])
+          setCardList([...live])
         }
         if(lstDoc.service== "content") {
           content.push(lstDoc)

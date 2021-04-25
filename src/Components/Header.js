@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Header.css'
 import { Navbar, NavDropdown,Form ,Nav ,FormControl, Button} from 'react-bootstrap';
 import logo from '../Assets/SVG/logo_1.svg'
@@ -6,7 +6,9 @@ import {
   Link
 } from "react-router-dom";
 
-function Header() {
+function Header(props) {
+
+
     return (
         <div style={{paddingTop:'5px'}} >
         <Navbar expand="lg">
@@ -15,16 +17,18 @@ function Header() {
             <img  src={logo} className="brand-logo-style img-fluid"></img>
         </Navbar.Brand>
         </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle onClick={props.toggleDrawer} aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto m-view m-view-m">
+          {console.log("props/.des",props.desktopHeader)}
+        {props.desktopHeader?<Nav className="ml-auto m-view m-view-m">
           <Link className="nav-link"  style={{textDecoration:'none', zIndex:'999'}} to="/">home</Link>
           <Link className="nav-link" style={{textDecoration:'none' , zIndex:'999'}} to="/about">about</Link>
             <Link className="nav-link" style={{textDecoration:'none' , zIndex:'999'}} to="/work">work</Link>
             <Link className="nav-link" style={{textDecoration:'none' , zIndex:'999'}} to="/connect">Connect</Link>
-          </Nav>
+          </Nav>:''}
         </Navbar.Collapse>
       </Navbar>
+     
       </div>
     )
 }

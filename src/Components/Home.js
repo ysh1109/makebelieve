@@ -9,14 +9,26 @@ function Home() {
   useEffect(()=>{
   Aos.init()
   },[])
+  const [screenWidth,setScreenWidth] = React.useState(window.innerWidth)
 
+  const screenResize =()=>{
+    console.log('render',window.innerWidth)
+    setScreenWidth(window.innerWidth)
+  }
+  React.useEffect(()=>{
+    window.addEventListener('resize',screenResize)
+
+    return ()=>{
+      window.removeEventListener('resize',screenResize)
+    }
+  },[])
     return (
       <div>
        <div className="mobile-view"  > 
-         <div style={{flex:1, height:'100%', display:'flex',justifyContent:'center', flexDirection:'column'}}>
+         <div style={{flex:1, height:'100%', display:'flex',justifyContent:screenWidth<995?'flex-start':'center', flexDirection:'column'}}>
           <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000"  data-aos-delay="500" className="home-head">We are an  <span className="highlight">experience design studio</span></h2>
-          <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000"  data-aos-delay="2000" className="home-head">aiming to bridge the gap between <span className="highlight">design and technology</span></h2>
-          <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000"  data-aos-delay="3000" className="home-head">To create elevated <span className="highlight">live, content and digital experiences.</span></h2>
+          <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1500"  data-aos-delay="1000" className="home-head">aiming to bridge the gap between <span className="highlight">design and technology</span></h2>
+          <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000"  data-aos-delay="2000" className="home-head">To create elevated <span className="highlight">live, content and digital experiences.</span></h2>
          </div>
          <div style={{flex:.7, height:'100%'}}>
           <Player

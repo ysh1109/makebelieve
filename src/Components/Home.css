@@ -204,7 +204,7 @@
 }
     @media only screen and (max-width: 768px) {
         .mobile-view{
-            flex-direction:column !important;
+            flex-direction:column-reverse !important;
             height: 150vh;
          }
     }

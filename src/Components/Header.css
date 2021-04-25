@@ -38,7 +38,9 @@ margin-right: 50px;
 z-index: 999999999;
 text-align: right;
 }
-
+.navbar-collapse {
+    /* height: 80vh; */
+}
 .Digit-style{
     font-family: 'Ariel-Rounded';
   }
