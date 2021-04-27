@@ -94,7 +94,7 @@ color:#0fff9b ;
     position: fixed;
     padding: 10px 20px;
 }
-.row{
+.row_form{
     display:flex;
     flex-direction:column;
     padding:10
@@ -116,7 +116,7 @@ color:#0fff9b ;
 #lottie {
     height: 300px;
 }
-.row {
+.row_form {
     align-items: center;
 }
 }

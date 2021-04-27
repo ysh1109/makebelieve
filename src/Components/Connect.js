@@ -61,7 +61,7 @@ function Connect() {
                   <div style={{}} className="form-lottie-container">
 
                   
-                    <div className="row" style={{}}>
+                    <div className="row_form" style={{}}>
                                 <div className="box-address">
                                 <p className="address"> <span className="highlight">address:</span> gently altered <br></br> <span className="Digit-style">201</span>, kshitij, veera desai road, <br></br> andheri (w), mumbai - <span className="Digit-style">400058</span> </p>
                                 </div>
