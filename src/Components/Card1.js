@@ -59,7 +59,6 @@ export default function Card1(props) {
                     <div className="card-fp bg-img-1" style={{backgroundImage:`url(${props.image})`}}>
                     <br></br> <br></br> <br></br> <br></br>
                     <h1 className="fp-head"> {props.title}</h1>
-                        {console.log("card data =====>",props.service)}
                        <div className="service-digital">{props.service}</div>
                     </div> 
                     </div>
