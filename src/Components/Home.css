@@ -206,7 +206,15 @@
         .mobile-view{
             flex-direction:column-reverse !important;
             height: 150vh;
+            
          }
+         .home-head{
+            color: #fff!important;
+            font-family: "LEIXO-DEMO";
+            font-weight: lighter;
+            font-size: 22px !important;
+            text-align: left;
+        }
     }
 
     .highlight{
@@ -225,3 +233,4 @@
     .Digit-style{
         font-family: 'Ariel-Rounded';
       }
+      

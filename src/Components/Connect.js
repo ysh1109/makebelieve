@@ -3,6 +3,7 @@ import './Connect.css'
 import { Form, Button } from 'react-bootstrap';
 import db from '../firebase.js';
 import scrollTop from '../Assets/scrollTop.svg'
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 function Connect() {
     const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => {
@@ -62,7 +63,7 @@ function Connect() {
                         <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
                         <section className="address-div">
                                 <div className="box-address">
-                                <p className="address"> <span className="highlight">address:</span> gently altered <span className="Digit-style">201</span>, kshitij, veera desai road, andheri (w), mumbai - <span className="Digit-style">400058</span> </p>
+                                <p className="address"> <span className="highlight">address:</span> gently altered <br></br> <span className="Digit-style">201</span>, kshitij, veera desai road, <br></br> andheri (w), mumbai - <span className="Digit-style">400058</span> </p>
                                 </div>
                             </section>
                             <br></br>
@@ -92,7 +93,15 @@ function Connect() {
                           
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>
-                        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <div className="new-style">
+                          <Player
+                            autoplay
+                            loop
+                            src="https://assets4.lottiefiles.com/packages/lf20_vy90wmws.json">
+                        </Player>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </section>

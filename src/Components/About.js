@@ -71,7 +71,7 @@ function About() {
           <div className="about-para-txt">
             <p className="about-info"> We are a team of <span className="about-para-highlight">designers, engineers and curators</span> <br></br> working together to create meaningful human interactions <br></br> with <span className="about-para-highlight">art and technology.</span> </p>
           </div>
-          
+          <hr className="line-style"></hr>
         </div>
       </section>
       <section className="services-block">

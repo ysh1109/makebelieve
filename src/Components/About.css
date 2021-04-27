@@ -254,7 +254,6 @@ text-align: left;
         bottom: 19px !important;
         z-index: 9999999;
         position: fixed;
-        background-color: rgba(0, 0, 0, 0) !important;
         width: 50px !important;
     }
 
@@ -290,8 +289,15 @@ text-align: left;
     bottom: 29px;
     z-index: 9999999;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0) !important;
+
 }
 .Digit-style{
     font-family: 'Ariel-Rounded';
+  }
+  .line-style{
+    width: 36%;
+    color: #0fff9b;
+    /* border: .1px solid; */
+    border-bottom: .2px solid #0fff9bad;
+    margin-top: 90px;
   }
