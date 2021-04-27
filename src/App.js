@@ -61,8 +61,8 @@ function App() {
               <Link className="nav-link" onClick={()=>toggleDrawer()} style={{textDecoration:'none' , zIndex:'999'}} to="/work">work</Link>
              <Link className="nav-link" onClick={()=>toggleDrawer()} style={{textDecoration:'none' , zIndex:'999'}} to="/connect">Connect</Link>
               </div>
-          </div>
-        :<Switch>
+          </div>:""}
+        <Switch>
          <Route exact path="/" component={Home}  >
           </Route>
          
@@ -76,7 +76,7 @@ function App() {
          
          </Route>
           
-        </Switch>}
+        </Switch>
         
         {/* <Home/> */}
         {/* <Work/> */}

@@ -7,8 +7,13 @@
 }
 
 .mobileHeader {
-  height: 80vh;
   background-image: url('../src/Assets/BGWITHNOISE.png');
+  height: 50vh;
+    position: absolute;
+    /* background: pink; */
+    background: transparent;
+    right: 0;
+    z-index: 9000;
 }
 .App-logo {
   height: 40vmin;
