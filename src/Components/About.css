@@ -254,7 +254,6 @@ text-align: left;
         bottom: 19px !important;
         z-index: 9999999;
         position: fixed;
-        background-color: rgba(0, 0, 0, 0) !important;
         width: 50px !important;
     }
 
@@ -290,7 +289,6 @@ text-align: left;
     bottom: 29px;
     z-index: 9999999;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0) !important;
 }
 .Digit-style{
     font-family: 'Ariel-Rounded';

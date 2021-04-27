@@ -300,7 +300,6 @@
     bottom: 29px;
     z-index: 9999999;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0) !important;
 
 }
 @media only screen and (max-width: 768px){
@@ -310,7 +309,6 @@
     bottom: 19px !important;
     z-index: 9999999;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0) !important;
     width: 50px !important;
 }
 }
