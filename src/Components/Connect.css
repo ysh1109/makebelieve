@@ -99,6 +99,9 @@ color:#0fff9b ;
     flex-direction:column;
     padding:10
 }
+#lottie {
+    height: 300px;
+}
 @media only screen and (max-width: 768px){
 .scroll-top {
     right: 42px !important;
