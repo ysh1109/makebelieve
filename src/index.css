@@ -23,3 +23,7 @@ src:  url('./Assets/leixo/LEIXO-DEMO.ttf') ;
   font-family: 'Ariel-Rounded';
 src:  url('./Assets/arlrdbd.ttf') ;
 }
+@font-face {
+  font-family: 'Big-john';
+  src: url('./Assets/BigJohnPRO-Bold.otf');
+}
