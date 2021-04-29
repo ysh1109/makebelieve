@@ -23,17 +23,18 @@ function Home() {
     }
   },[])
     return (
-      <div>
+      <div style={{}}>
        <div className="mobile-view"  > 
          <div style={{flex:1, height:'100%', display:'flex',justifyContent:screenWidth<995?'flex-start':'center', flexDirection:'column'}}>
           <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000"  data-aos-delay="500" className="home-head">We are an  <span className="highlight">experience design studio</span></h2>
           <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1500"  data-aos-delay="1000" className="home-head">aiming to bridge the gap between <span className="highlight">design and technology</span></h2>
           <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000"  data-aos-delay="2000" className="home-head">To create elevated <span className="highlight">live, content and digital experiences.</span></h2>
          </div>
-         <div style={{flex:.7, height:'100%'}}>
+         <div className="home_lottie" style={{flex:.7, height:'100%'}}>
           <Player
               autoplay
               loop
+              style={{height:500}}
               src="https://assets8.lottiefiles.com/packages/lf20_ybrg8gup.json">
           </Player>
          </div>

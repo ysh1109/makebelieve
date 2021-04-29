@@ -171,6 +171,9 @@
     font-weight: lighter;
     /* font-size: 50px; */
 }
+.home_lottie.player {
+    background-color: #0fff9b;
+}
 .copyright{
     color:#0fff9b ;
     font-family: 'LEIXO-DEMO';
@@ -205,7 +208,7 @@
     @media only screen and (max-width: 768px) {
         .mobile-view{
             flex-direction:column-reverse !important;
-            height: 150vh;
+            height: 120vh;
             
          }
          .home-head{
