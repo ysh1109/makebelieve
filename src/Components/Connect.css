@@ -122,6 +122,12 @@ color:#0fff9b ;
 .row_form {
     align-items: center;
 }
+
+.address {
+    width: 98%;
+    margin: auto;
+    text-align: center;
+}
 }
 
 .Digit-style{

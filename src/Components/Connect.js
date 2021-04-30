@@ -95,6 +95,7 @@ function Connect() {
                           <Player
                             autoplay
                             loop
+                            speed={0.75}
                             src="https://assets4.lottiefiles.com/packages/lf20_vy90wmws.json">
                         </Player>
                           </div>
