@@ -12,6 +12,8 @@ this.addEventListener('install',(event)=>{
                 "/static/media/logo_1.b89d42fe.svg",
                 "/index.html",
                 "/work",
+                "/connect",
+                "/about",
                 "/"
             ])
         })
