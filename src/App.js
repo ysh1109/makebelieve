@@ -41,7 +41,6 @@ function App() {
     }
   },[screenWidth])
   const screenResize =()=>{
-    console.log('render',window.innerWidth)
     setScreenWidth(window.innerWidth)
   }
   React.useEffect(()=>{

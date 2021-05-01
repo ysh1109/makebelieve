@@ -12,7 +12,7 @@ function Home() {
   const [screenWidth,setScreenWidth] = React.useState(window.innerWidth)
 
   const screenResize =()=>{
-    console.log('render',window.innerWidth)
+    // console.log('render',window.innerWidth)
     setScreenWidth(window.innerWidth)
   }
   React.useEffect(()=>{

@@ -43,14 +43,15 @@ function Work() {
   const [selectedItem,setSelectedItem] = useState('live')
   
     useEffect(() => {
-     fetchBlogs();
+    const retu =  fetchBlogs()
 
     }, [])
   
     const fetchBlogs=async()=>{
-      const response=db.collection('works');
-      const data=await response.get();
-      const list = [];
+      try {
+        const response=db.collection('works');
+         const data=await response.get();
+         const list = [];
       const digital = [];
       const live = [];
       const content = [];
@@ -74,9 +75,13 @@ function Work() {
           setContent([...content])
         }
        })
-
-
-      console.log(data)
+       
+      }
+      catch (err) {
+        console.log("respssssonse",err)
+      }
+      
+      
   }
 
   const selectedList = (tabName) => {
