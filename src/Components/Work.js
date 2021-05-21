@@ -35,6 +35,7 @@ function Work() {
   const [videoUrl,setVideoUrl] = useState('');
   const [desc,setDesc] = useState('');
   const [image,setImage] = useState('');
+  const [service,setService] = useState('')
   const [isImage,setIsImage] = useState('')
   const [digital,setDigital] = useState([])
   const [live,setLive] = useState([])
@@ -112,13 +113,14 @@ function Work() {
      
   } 
   }
-  const setModalData = (url,desc,title,image,showImage) => {
+  const setModalData = (url,desc,title,image,showImage,servicee) => {
     setVideoUrl(url)
     setDesc(desc)
     setTitle(title)
     setShow(true)
     setImage(image)
     setIsImage(showImage)
+    setService(servicee)
   }
   const customStyles = {
     content : {
@@ -139,7 +141,7 @@ backgroundColor: '#000',
   const renderList = (data) => {
     return (
       data.map((item,key)=>(
-        < Card1 id={item.id} title={item.title} service={item.service} image={item.image} setModalData={()=>setModalData(item.videourl,item.desc,item.title,item.image,item.isImage)}/>
+        < Card1 id={item.id} title={item.title} service={item.service} image={item.image} setModalData={()=>setModalData(item.videourl,item.desc,item.title,item.image,item.isImage,item.service)}/>
      ))
     )
     
@@ -241,7 +243,7 @@ backgroundColor: '#000',
               <div className="col-12 col-sm-12 col-md-12 col-xl-6 col-lg-6">
               <div>
                 <h1 className="title">{title}</h1>
-                <h4 className="service-name">(live)</h4>
+                <h4 className="service-name">( {service} )</h4>
                 <br></br>
                 <p className="para">{desc}
                 </p>
