@@ -41,7 +41,7 @@ function Work() {
   const [live,setLive] = useState([])
   const [content,setContent] = useState([])
   const [viewAll,setViewAll] = useState([])
-  const [selectedItem,setSelectedItem] = useState('live')
+  const [selectedItem,setSelectedItem] = useState('viewall')
   
     useEffect(() => {
     const retu =  fetchBlogs()
@@ -148,10 +148,10 @@ backgroundColor: '#000',
   }
     return (
       <div className="scroll-to-top">
-      {isVisible && 
-      <div onClick={scrollToTop}>
+      {isVisible ?
+      !show && <div onClick={scrollToTop}>
         <img className="scroll-top" src={scrollTop} alt='Go to top'/>
-      </div>}
+      </div>:""}
         <div className="reel-top"></div>
         <section className="show-reel">
         <div className="overlay-wcs"></div>
@@ -245,8 +245,13 @@ backgroundColor: '#000',
                 <h1 className="title">{title}</h1>
                 <h4 className="service-name">( {service} )</h4>
                 <br></br>
-                <p className="para">{desc}
+                <p className="para">{desc?desc:desc[0]}
                 </p>
+                {/* <p className="para">{desc[1]}
+                </p>
+                <p className="para">{desc[2]}
+                </p> */}
+              
               </div>
               </div>
           </div>
