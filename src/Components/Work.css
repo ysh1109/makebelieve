@@ -84,7 +84,7 @@
 .fp-head{
     /* font-family: 'LEIXO-DEMO'; */
     font-family: 'Big-john';
-    font-size: 32px !important; 
+    font-size: 32px; 
     color: #fff;
     text-decoration: none;
 }
@@ -171,15 +171,23 @@
     .tabbar > p {
       font-size: 22px;
     }
-    
+    .fp-head {
+      font-size: 24px;
+    }
 }
 @media only screen and (max-width: 500px){ 
   .tabbar > p {
     font-size: 18px;
   }
+   .fp-head {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 400px){ 
   .tabbar > p {
+    font-size: 16px;
+  }
+  .fp-head {
     font-size: 16px;
   }
 }
