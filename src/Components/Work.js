@@ -4,6 +4,8 @@ import './Work.css'
 import db from '../firebase.js';
 import Card1 from './Card1'
 import { isElement } from 'react-dom/test-utils';
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import video from '../Assets/3d_cube.mp4'
 import Modal from 'react-modal';
 import scrollTop from '../Assets/scrollTop.svg'
 function Work() {
@@ -37,6 +39,7 @@ function Work() {
   const [image,setImage] = useState('');
   const [service,setService] = useState('')
   const [isImage,setIsImage] = useState('')
+  const [projectLink,setProjectLink] = useState('');
   const [digital,setDigital] = useState([])
   const [live,setLive] = useState([])
   const [content,setContent] = useState([])
@@ -113,7 +116,7 @@ function Work() {
      
   } 
   }
-  const setModalData = (url,desc,title,image,showImage,servicee) => {
+  const setModalData = (url,desc,title,image,showImage,servicee,projectLink) => {
     setVideoUrl(url)
     setDesc(desc)
     setTitle(title)
@@ -121,6 +124,7 @@ function Work() {
     setImage(image)
     setIsImage(showImage)
     setService(servicee)
+    setProjectLink(projectLink)
   }
   const customStyles = {
     content : {
@@ -141,7 +145,7 @@ backgroundColor: '#000',
   const renderList = (data) => {
     return (
       data.map((item,key)=>(
-        < Card1 id={item.id} title={item.title} service={item.service} image={item.image} setModalData={()=>setModalData(item.videourl,item.desc,item.title,item.image,item.isImage,item.service)}/>
+        < Card1 id={item.id} title={item.title} service={item.service} image={item.image} setModalData={()=>setModalData(item.videourl,item.desc,item.title,item.image,item.isImage,item.service,item.projectlink)}/>
      ))
     )
     
@@ -154,7 +158,9 @@ backgroundColor: '#000',
       </div>:""}
         <div className="reel-top"></div>
         <section className="show-reel">
-        <div className="overlay-wcs"></div>
+        <div className="overlay-wcs">
+      
+        </div>
         <div className="container video-div h-100">
       <div className="d-flex h-100 text-center align-items-center">
         <div className="w-100 text-white">
@@ -245,12 +251,14 @@ backgroundColor: '#000',
                 <h1 className="title">{title}</h1>
                 <h4 className="service-name">( {service} )</h4>
                 <br></br>
-                <p className="para">{desc?desc:desc[0]}
+                <h4 className="para-link"><a href={projectLink} target="_blank">{projectLink}</a></h4>
+                <br></br>
+                <p className="para">{desc[0]}
                 </p>
-                {/* <p className="para">{desc[1]}
+                <p className="para">{desc[1]}
                 </p>
                 <p className="para">{desc[2]}
-                </p> */}
+                </p>
               
               </div>
               </div>
