@@ -131,6 +131,7 @@
   font-family: 'Big-john';
   font-size: 24px !important; 
   color: #fff;
+  text-decoration: underline;
 }
 .para-link a {
   text-decoration: none;
@@ -138,7 +139,7 @@
 }
 .para-link a:hover {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 102, 255);
 }
 .work-muted {
   position: absolute;
