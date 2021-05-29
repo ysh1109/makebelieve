@@ -6,6 +6,7 @@ import Card1 from './Card1'
 import { isElement } from 'react-dom/test-utils';
 import Modal from 'react-modal';
 import scrollTop from '../Assets/scrollTop.svg'
+import showReel from '../Assets/showReel.mp4'
 function Work() {
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => {
@@ -154,12 +155,15 @@ backgroundColor: '#000',
       </div>}
         <div className="reel-top"></div>
         <section className="show-reel">
-        <div className="overlay-wcs"></div>
+        <div className="overlay-wcs"><video playsinline="playsinline" autoplay="autoplay"  loop="loop">
+          <source src={showReel} type="video/mp4"></source>
+        </video>
+        </div>
         <div className="container video-div h-100">
       <div className="d-flex h-100 text-center align-items-center">
         <div className="w-100 text-white">
-          <h1>MAKE BELIEVE</h1>
-          <p className="lead mb-0">aiming to bridge the gap between design and technology</p>
+          
+          
         </div>
       </div>
     </div>
