@@ -84,7 +84,7 @@
 .fp-head{
     /* font-family: 'LEIXO-DEMO'; */
     font-family: 'Big-john';
-    font-size: 32px !important; 
+    font-size: 32px; 
     color: #fff;
     text-decoration: none;
 }
@@ -127,6 +127,20 @@
 .tabbar:hover {
   cursor: pointer;
 }
+.para-link {
+  font-family: 'Big-john';
+  font-size: 24px !important; 
+  color: #fff;
+}
+.para-link a {
+  text-decoration: none;
+  color: #0fff9b;
+}
+.para-link a:hover {
+  text-decoration: none;
+  color: white;
+}
+
 @media only screen and (max-width: 768px){
     .card-fp {
         text-align: center;
@@ -162,24 +176,37 @@
         text-decoration: none;
     }
     .para{
-        font-family: 'LEIXO-DEMO';
-        font-size: 28px !important; 
+      font-family: 'Big-john';
+        font-size: 22px !important; 
         color: #fff;
         line-height: 134%;
         text-decoration: none;
     }
+    .para-link {
+      font-family: 'Big-john';
+      font-size: 28px !important; 
+      color: #fff;
+    }
     .tabbar > p {
       font-size: 22px;
     }
-    
+    .fp-head {
+      font-size: 24px;
+    }
 }
 @media only screen and (max-width: 500px){ 
   .tabbar > p {
     font-size: 18px;
   }
+   .fp-head {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 400px){ 
   .tabbar > p {
+    font-size: 16px;
+  }
+  .fp-head {
     font-size: 16px;
   }
 }
@@ -190,7 +217,7 @@
     text-decoration: none;
 }
 .para{
-    font-family: 'LEIXO-DEMO';
+  font-family: 'Big-john';
     font-size: 22px !important; 
     color: #fff;
     line-height: 134%;
