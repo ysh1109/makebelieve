@@ -47,6 +47,7 @@ function Work() {
   const [live,setLive] = useState([])
   const [content,setContent] = useState([])
   const [viewAll,setViewAll] = useState([])
+  const [projectLinkName,setProjectLinkName] = useState('');
   const [isMuted,setIsMuted] = useState(false)
   const [selectedItem,setSelectedItem] = useState('viewall')
   
@@ -121,7 +122,7 @@ function Work() {
      
   } 
   }
-  const setModalData = (url,desc,title,image,showImage,servicee,projectLink) => {
+  const setModalData = (url,desc,title,image,showImage,servicee,projectLink,linkName) => {
     setVideoUrl(url)
     setDesc(desc)
     setTitle(title)
@@ -130,6 +131,7 @@ function Work() {
     setIsImage(showImage)
     setService(servicee)
     setProjectLink(projectLink)
+    setProjectLinkName(linkName)
   }
   const customStyles = {
     content : {
@@ -150,7 +152,7 @@ backgroundColor: '#000',
   const renderList = (data) => {
     return (
       data.map((item,key)=>(
-        < Card1 id={item.id} title={item.title} service={item.service} image={item.image} setModalData={()=>setModalData(item.videourl,item.desc,item.title,item.image,item.isImage,item.service,item.projectlink)}/>
+        < Card1 id={item.id} title={item.title} service={item.service} image={item.image} setModalData={()=>setModalData(item.videourl,item.desc,item.title,item.image,item.isImage,item.service,item.projectlink,item.linkName)}/>
      ))
     )
     
@@ -252,7 +254,7 @@ backgroundColor: '#000',
                 <h1 className="title">{title}</h1>
                 <h4 className="service-name">( {service} )</h4>
                 <br></br>
-                <h4 className="para-link"><a href={projectLink} target="_blank">{projectLink}</a></h4>
+                <h4 className="para-link"><a href={projectLink} target="_blank">{projectLinkName}</a></h4>
                 <br></br>
                 <p className="para">{desc[0]}
                 </p>
