@@ -9,6 +9,8 @@ import video from '../Assets/3d_cube.mp4'
 import Modal from 'react-modal';
 import scrollTop from '../Assets/scrollTop.svg'
 import showReel from '../Assets/showReel.mp4'
+import muted from '../Assets/mute.png'
+import volume from '../Assets/volume.png'
 function Work() {
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => {
@@ -45,6 +47,7 @@ function Work() {
   const [live,setLive] = useState([])
   const [content,setContent] = useState([])
   const [viewAll,setViewAll] = useState([])
+  const [isMuted,setIsMuted] = useState(false)
   const [selectedItem,setSelectedItem] = useState('viewall')
   
     useEffect(() => {
@@ -65,6 +68,7 @@ function Work() {
         const lstDoc = {idss:item.id,...item.data()}
         viewall.push(lstDoc);
         setViewAll([...viewall])
+        setCardList([...viewall])
         if(lstDoc.service == "digital") {
           digital.push(lstDoc)
           setDigital([...digital])
@@ -73,7 +77,7 @@ function Work() {
         if(lstDoc.service== "live") {
           live.push(lstDoc)
           setLive([...live])
-          setCardList([...live])
+         
         }
         if(lstDoc.service== "content") {
           content.push(lstDoc)
@@ -159,18 +163,13 @@ backgroundColor: '#000',
       </div>:""}
         <div className="reel-top"></div>
         <section className="show-reel">
-        <div className="overlay-wcs"><video playsinline="playsinline" autoplay="autoplay"  loop="loop">
+        <div className="overlay-wcs"><video playsinline="playsinline" autoplay="autoplay" muted={isMuted} loop="loop">
           <source src={showReel} type="video/mp4"></source>
         </video>
         </div>
-        <div className="container video-div h-100">
-      <div className="d-flex h-100 text-center align-items-center">
-        <div className="w-100 text-white">
-          
-          
+        <div className="work-muted" onClick={()=>setIsMuted(()=>!isMuted)}>
+          <img src={isMuted?muted:volume} style={{height:'100%',width:'100%',objectFit:'contain'}}/>
         </div>
-      </div>
-    </div>
         </section>
         <section className="feayured-projects-block">
         <div className="container-fluid">
